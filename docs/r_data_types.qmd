@@ -1,0 +1,56 @@
+---
+title: "r_data_types"
+format: html
+---
+
+## Vectors, lists & data frames 
+```{r}
+# Create a vector 
+vec_1 <-c(2, 5, 9, 10, 8, 12, 1, 0)
+vec_1
+class(vec_1)
+typeof(vec_1)
+
+#Access 3rd element 
+vec_1_e3 <- vec_1[3]
+vec_1_e3
+
+#Access 1st element
+vec_1_e1 <-vec_1[1]
+vec_1_e1
+
+# Access 5th through 7th element
+vec_1_e5to7 <- vec_1[5:7]
+vec_1_e5to7
+
+#Reassign vec_1 as character
+
+vec_1_char <- as.character(vec_1)
+vec_1_char
+```
+```{r}
+#Create a new vector
+vec_2 <- c(town = "Santa Barbara",
+          location = "Rincon", 
+          swell = "south")
+class(vec_2)
+
+#Access second element
+vec_2_e2 <- vec_2[2]
+vec_2_e2
+```
+```{r}
+#Create a data frame
+
+df_1 <- data.frame(region = c("A", "B", "A", "D"), 
+                   species = c("otter", "great white", "sea lion", "gray whale"), 
+                   count = c(12, 2, 36, 6))
+df_1
+
+class(df_1)
+class(df_1$species)
+max_count <-max(df_1$count)
+max_count
+  
+```
+
